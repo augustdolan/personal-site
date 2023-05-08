@@ -1,11 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-// import Card from "~/components/Card";
 import { Svg } from "types/Svg";
-
-import { api } from "~/utils/api";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import Navbar from "~/components/Navbar";
 import Button from "~/components/Button";
 
