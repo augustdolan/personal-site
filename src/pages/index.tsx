@@ -6,6 +6,8 @@ import { Svg } from "types/Svg";
 import { api } from "~/utils/api";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Navbar from "~/components/Navbar";
+import Button from "~/components/Button";
 
 const Card = dynamic(() => import("~/components/Card"), { ssr: false });
 
@@ -21,6 +23,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="mx-auto my-0 w-3/4">
+        <Navbar />
         <section className="flex h-screen flex-col justify-center">
           <p className="mb-4 text-peach">Hey there, I'm</p>
           <h1 className="mb-4 text-6xl text-emerald-200">
@@ -32,14 +35,9 @@ const Home: NextPage = () => {
             best applications are built when the developer and user experiences
             both are par excellence.
           </p>
-          <Link
-            href="/resume"
-            className="w-40 rounded-md border-2 border-solid border-peach py-2 text-center text-peach"
-          >
-            Resume
-          </Link>
+          <Button href="/resume" text="Resume" />
         </section>
-        <section className="flex h-screen flex-col justify-center">
+        <section id="about" className="flex h-screen flex-col justify-center">
           <h1 className="mb-8 text-5xl text-emerald-200">About Me</h1>
           <p className="w-1/2 mb-4">
             I believe that user research and input is key to creating a robust
@@ -55,7 +53,7 @@ const Home: NextPage = () => {
             a rapid pace alongside a product and team.
           </p>
         </section>
-        <section className="flex h-screen flex-col justify-center">
+        <section id="projects" className="flex h-screen flex-col justify-center">
           <h1 className="mb-8 text-5xl text-emerald-200">Projects</h1>
           <ul className="grid grid-cols-4 gap-5">
             <Card
@@ -68,8 +66,12 @@ const Home: NextPage = () => {
             />
           </ul>
         </section>
-        <section className="flex h-screen flex-col justify-center">
+        <section id="contact" className="flex h-screen flex-col justify-center">
           <h1 className="mb-8 text-5xl text-emerald-200">Drop a Line</h1>
+          <p className="w-1/2 mb-8">
+            I'm currently looking for my next big opportunity. If you want to chat, just reach out!
+          </p>
+          <Button href="mailto: august.dolan1@gmail.com" text="Contact Me" />
         </section>
       </main>
     </>
