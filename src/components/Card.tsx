@@ -17,7 +17,7 @@ const Card = ({
   iconLink?: string;
 }) => {
   return (
-    <Link className="bg-emerald-900 rounded-md p-4" target="_blank" href={link}>
+    <Link className="group bg-emerald-900 rounded-md p-4 hover:-translate-y-2 transition ease-in-out" target="_blank" href={link}>
       <li className="flex flex-col">
         <Image
           className="mb-4 self-center"
@@ -26,7 +26,7 @@ const Card = ({
           src={src}
           alt={title}
         />
-        <h3 className="border-t-2 border-peach pt-4 text-xl font-bold">{title}</h3>
+        <h3 className="border-t-2 border-emerald-200 group-hover:border-peach group-hover:text-peach pt-4 text-xl font-bold">{title}</h3>
         {description && <p className="text-sm italic mb-4">{description}</p>}
         {icon && (
           <Link className="self-end" target="_blank" href={iconLink || link}>
