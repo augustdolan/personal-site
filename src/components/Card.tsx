@@ -4,21 +4,21 @@ import Link from "next/link";
 const Card = ({
   src,
   title,
-  description,
   link,
+  description,
   icon,
   iconLink,
 }: {
   src: string;
   title: string;
-  description: string;
   link: string;
+  description?: string;
   icon?: string;
   iconLink?: string;
 }) => {
   return (
-    <li className="rounded-md border-2 border-solid border-gray-200 p-4">
-      <Link className="flex flex-col" target="_blank" href={link}>
+    <Link className="h-[350px] rounded-md border-2 border-solid border-gray-200 p-4" target="_blank" href={link}>
+      <li className="flex flex-col">
         <Image
           className="mb-4 self-center"
           width={150}
@@ -26,15 +26,15 @@ const Card = ({
           src={src}
           alt={title}
         />
-        <h3 className="border-t-2 text-xl font-bold">{title}</h3>
-        <p className="text-sm italic text-gray-500">{description}</p>
+        <h3 className="border-t-2 pt-4 text-xl font-bold">{title}</h3>
+        {description && <p className="text-sm italic text-gray-500">{description}</p>}
         {icon && (
           <Link className="self-end" target="_blank" href={iconLink || link}>
             <Image src={icon} width={42} height={42} alt="icon" />
           </Link>
         )}
-      </Link>
-    </li>
+      </li>
+    </Link>
   );
 };
 

@@ -20,37 +20,33 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="pt-4">
-        <h1 className="text-center text-4xl">
+        <h1 className="text-center text-4xl mb-16 mt-2">
           August Dolan <i className="text-xs">(They/Them)</i>
         </h1>
         <div className="w-1/2 translate-x-1/2">
-          <div>
-            <h2>Site Links</h2>
+          <div className="mb-8">
+            <h2 className="text-sm italic text-gray-500">Site Links</h2>
             <ul className="grid grid-cols-3 gap-5">
               <Card
                 src={"/mock-img.webp"}
                 title="Resume"
-                description="nothing yet"
                 link="/resume"
               />
               <Card
                 src="/mock-img.webp"
-                description="check out my linkedIn hehe"
                 title="LinkedIn"
                 link="https://www.linkedin.com/in/august-dolan"
-                icon={Svg.Linkedin}
+                // icon={Svg.Linkedin}
               />
               <Card
                 src="/mock-img.webp"
-                description="check out my github hehe"
                 title="Github"
                 link="http://www.github.com/augustdolan"
-                icon={Svg.Github}
               />
             </ul>
           </div>
           <div>
-            <h2>Current Projects</h2>
+            <h2 className="text-sm italic text-gray-500">Current Projects</h2>
             <ul className="grid grid-cols-3 gap-5">
               <Card
                 src={Svg.Trove}
