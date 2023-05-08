@@ -1,5 +1,9 @@
+import Navbar from "~/components/Navbar";
+
 const Resume = () => {
   return (
+    <>
+      <Navbar />
       <div className="w-1/2 translate-x-1/2 p-6">
         <h1 className="mb-4 text-center text-2xl text-emerald-200">
           August Dolan
@@ -150,6 +154,7 @@ const Resume = () => {
           </li>
         </ul>
       </div>
+    </>
   );
 };
 

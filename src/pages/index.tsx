@@ -18,8 +18,8 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
       <main className="mx-auto my-0 w-3/4">
-        <Navbar />
         <section className="flex h-screen flex-col justify-center">
           <p className="mb-4 text-peach">Hey there, I'm</p>
           <h1 className="mb-4 text-6xl text-emerald-200">
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         </section>
         <section id="about" className="flex h-screen flex-col justify-center">
           <h1 className="mb-8 text-5xl text-emerald-200">About Me</h1>
-          <p className="w-1/2 mb-4">
+          <p className="mb-4 w-1/2">
             I believe that user research and input is key to creating a robust
             and extensible model. By writing software in a language and with
             domain objects that reflect the expert's understanding of the world
@@ -49,7 +49,10 @@ const Home: NextPage = () => {
             a rapid pace alongside a product and team.
           </p>
         </section>
-        <section id="projects" className="flex h-screen flex-col justify-center">
+        <section
+          id="projects"
+          className="flex h-screen flex-col justify-center"
+        >
           <h1 className="mb-8 text-5xl text-emerald-200">Projects</h1>
           <ul className="grid grid-cols-4 gap-5">
             <Card
@@ -64,8 +67,9 @@ const Home: NextPage = () => {
         </section>
         <section id="contact" className="flex h-screen flex-col justify-center">
           <h1 className="mb-8 text-5xl text-emerald-200">Drop a Line</h1>
-          <p className="w-1/2 mb-8">
-            I'm currently looking for my next big opportunity. If you want to chat, just reach out!
+          <p className="mb-8 w-1/2">
+            I'm currently looking for my next big opportunity. If you want to
+            chat, just reach out!
           </p>
           <Button href="mailto: august.dolan1@gmail.com" text="Contact Me" />
         </section>
