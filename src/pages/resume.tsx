@@ -1,7 +1,7 @@
 const Resume = () => {
   return (
-      <div className="w-1/2 translate-x-1/2 p-6 bg-white">
-        <h1 className="mb-4 text-center text-2xl text-dark-magenta">
+      <div className="w-1/2 translate-x-1/2 p-6">
+        <h1 className="mb-4 text-center text-2xl text-emerald-200">
           August Dolan
         </h1>
         <ul className="mb-3 flex flex-auto flex-row flex-wrap justify-around">
@@ -36,7 +36,7 @@ const Resume = () => {
             </a>
           </li>
         </ul>
-        <h2 className="mb-3 text-xl text-dark-magenta">
+        <h2 className="mb-3 text-xl text-emerald-200">
           Professional Experience
         </h2>
         <h3 className="mb-2">
@@ -100,7 +100,7 @@ const Resume = () => {
             product sku
           </li>
         </ul>
-        <h2 className="mb-3 text-xl text-dark-magenta">Projects</h2>
+        <h2 className="mb-3 text-xl text-emerald-200">Projects</h2>
         <h3 className="mb-2">
           <b>Tarjay</b>
         </h3>
@@ -121,7 +121,7 @@ const Resume = () => {
             development.
           </li>
         </ul>
-        <h2 className="mb-3 text-xl text-dark-magenta">Technical Skills</h2>
+        <h2 className="mb-3 text-xl text-emerald-200">Technical Skills</h2>
         <ul className="mb-2 list-disc">
           <li>
             <b>Frontend</b> | Javascript (ES5, ES6+), CSS, React, Next.js,
@@ -136,7 +136,7 @@ const Resume = () => {
             Jest, Loader.io, k6, New Relic, Domain Driven Design
           </li>
         </ul>
-        <h2 className="mb-3 text-xl text-dark-magenta">Education</h2>
+        <h2 className="mb-3 text-xl text-emerald-200">Education</h2>
         <ul>
           <li>
             Hack Reactor, <i>Advanced Software Engineering Immersive Program</i>

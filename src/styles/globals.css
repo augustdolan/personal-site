@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
   body {
-    @apply bg-neutral-200;
+    @apply bg-emerald-950;
+    @apply text-emerald-400
   }
-} */
+}

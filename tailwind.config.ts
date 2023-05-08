@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'dark-magenta': '#a64d79'
+        'dark-magenta': '#a64d79',
+        'peach': '#ffe5b4',
       }
     },
   },

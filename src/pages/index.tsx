@@ -5,8 +5,9 @@ import { Svg } from "types/Svg";
 
 import { api } from "~/utils/api";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
-const Card = dynamic(() => import("~/components/Card"), { ssr: false })
+const Card = dynamic(() => import("~/components/Card"), { ssr: false });
 
 const Home: NextPage = () => {
   return (
@@ -19,46 +20,57 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="pt-4">
-        <h1 className="text-center text-4xl mb-16 mt-2">
-          August Dolan <i className="text-xs">(They/Them)</i>
-        </h1>
-        <div className="w-1/2 translate-x-1/2">
-          <div className="mb-8">
-            <h2 className="text-sm italic text-gray-500">Site Links</h2>
-            <ul className="grid grid-cols-3 gap-5">
-              <Card
-                src={"/mock-img.webp"}
-                title="Resume"
-                link="/resume"
-              />
-              <Card
-                src="/mock-img.webp"
-                title="LinkedIn"
-                link="https://www.linkedin.com/in/august-dolan"
-                // icon={Svg.Linkedin}
-              />
-              <Card
-                src="/mock-img.webp"
-                title="Github"
-                link="http://www.github.com/augustdolan"
-              />
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-sm italic text-gray-500">Current Projects</h2>
-            <ul className="grid grid-cols-3 gap-5">
-              <Card
-                src={Svg.Trove}
-                description="a site for record collectors using Discogs"
-                title="Trove"
-                link="https://trove-silk.vercel.app"
-                iconLink="https://github.com/augustdolan/trove"
-                icon={Svg.Github}
-              />
-            </ul>
-          </div>
-        </div>
+      <main className="mx-auto my-0 w-3/4">
+        <section className="flex h-screen flex-col justify-center">
+          <p className="mb-4 text-peach">Hey there, I'm</p>
+          <h1 className="mb-4 text-6xl text-emerald-200">
+            August Dolan <i>(They/Them)</i>.
+          </h1>
+          <h2 className="mb-8 text-6xl ">I'm a fullstack software engineer.</h2>
+          <p className="mb-8 w-1/2 ">
+            I've got a penchant for domain driven design and believe that the
+            best applications are built when the developer and user experiences
+            both are par excellence.
+          </p>
+          <Link
+            href="/resume"
+            className="w-40 rounded-md border-2 border-solid border-peach py-2 text-center text-peach"
+          >
+            Resume
+          </Link>
+        </section>
+        <section className="flex h-screen flex-col justify-center">
+          <h1 className="mb-8 text-5xl text-emerald-200">About Me</h1>
+          <p className="w-1/2 mb-4">
+            I believe that user research and input is key to creating a robust
+            and extensible model. By writing software in a language and with
+            domain objects that reflect the expert's understanding of the world
+            we're helping, we bind engineer and user understanding together,
+            creating software that is both explicit and extensible.
+          </p>
+          <p className="w-1/2">
+            I bring passion and energy to the teams I am on, brightening the
+            experience of my colleagues. I'm currently looking for a new, fast
+            paced opportunity where I can show my chops and continue to grow at
+            a rapid pace alongside a product and team.
+          </p>
+        </section>
+        <section className="flex h-screen flex-col justify-center">
+          <h1 className="mb-8 text-5xl text-emerald-200">Projects</h1>
+          <ul className="grid grid-cols-4 gap-5">
+            <Card
+              src={Svg.Trove}
+              description="a site for record collectors using Discogs"
+              title="Trove"
+              link="https://trove-silk.vercel.app"
+              iconLink="https://github.com/augustdolan/trove"
+              icon={Svg.Github}
+            />
+          </ul>
+        </section>
+        <section className="flex h-screen flex-col justify-center">
+          <h1 className="mb-8 text-5xl text-emerald-200">Drop a Line</h1>
+        </section>
       </main>
     </>
   );
