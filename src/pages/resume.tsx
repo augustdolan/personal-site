@@ -2,9 +2,9 @@ import Navbar from "~/components/Navbar";
 
 const Resume = () => {
   return (
-    <>
+    <div>
       <Navbar />
-      <div className="w-1/2 translate-x-1/2 p-6">
+      <div className="pt-20 w-1/2 translate-x-1/2 p-6">
         <h1 className="mb-4 text-center text-2xl text-emerald-200">
           August Dolan
         </h1>
@@ -154,7 +154,7 @@ const Resume = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
