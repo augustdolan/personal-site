@@ -4,12 +4,12 @@ const Resume = () => {
   return (
     <div>
       <Navbar />
-      <div className="pt-20 w-1/2 translate-x-1/2 p-6">
+      <div className="pt-20 sm:w-1/2 sm:translate-x-1/2 p-6">
         <h1 className="mb-4 text-center text-2xl text-emerald-200">
           August Dolan
         </h1>
-        <ul className="mb-3 flex flex-auto flex-row flex-wrap justify-around">
-          <li>
+        <ul className="mb-12 sm:mb-3 flex flex-auto flex-row flex-wrap gap-1 sm:justify-around">
+          <li className="max-sm:w-full">
             <b>Location:</b> Boston, MA
           </li>
           <li>
@@ -46,7 +46,7 @@ const Resume = () => {
         <h3 className="mb-2">
           <b>Cimpress</b> | Software Engineer II
         </h3>
-        <ul className="mb-2 list-disc">
+        <ul className="mb-10 flex flex-col gap-4 sm:mb-2 list-disc">
           <li>
             Full stack engineer for $2 billion ecommerce platform - one of only
             two routing domain experts for applications supporting thousands of
@@ -84,7 +84,7 @@ const Resume = () => {
         <h3 className="mb-2">
           <b>Cimpress</b> | Software Engineer I
         </h3>
-        <ul className="mb-2 list-disc">
+        <ul className="mb-12 flex flex-col gap-4 sm:mb-2 list-disc">
           <li>
             Responsible for all support requests one week every month, handling
             5-10 requests daily
@@ -108,7 +108,7 @@ const Resume = () => {
         <h3 className="mb-2">
           <b>Tarjay</b>
         </h3>
-        <ul className="mb-2 list-disc">
+        <ul className="mb-12 flex flex-col gap-4 sm:mb-2 list-disc">
           <li>
             Webscaled legacy application to {">"}1k RPS for millions of products
             with 80ms of latency and {"<"}1% error rate
@@ -126,7 +126,7 @@ const Resume = () => {
           </li>
         </ul>
         <h2 className="mb-3 text-xl text-emerald-200">Technical Skills</h2>
-        <ul className="mb-2 list-disc">
+        <ul className="flex flex-col gap-4 mb-12 sm:mb-2 list-disc">
           <li>
             <b>Frontend</b> | Javascript (ES5, ES6+), CSS, React, Next.js,
             Emotion/Styled Components, React Router, React Query
@@ -141,7 +141,7 @@ const Resume = () => {
           </li>
         </ul>
         <h2 className="mb-3 text-xl text-emerald-200">Education</h2>
-        <ul>
+        <ul className="flex flex-col gap-4 list-disc">
           <li>
             Hack Reactor, <i>Advanced Software Engineering Immersive Program</i>
           </li>
