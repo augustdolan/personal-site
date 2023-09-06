@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className="mx-auto my-0 w-3/4 pt-24 sm:pt-0">
-        <section className="flex flex-col justify-center max-sm:mb-32 sm:h-screen">
+        <section className="flex flex-col justify-center mb-16 sm:h-screen">
           <p className="mb-4 text-peach">Hey there, I'm</p>
           <h1 className="mb-4 text-4xl text-emerald-200 sm:text-6xl">
             August Dolan <i>(They/Them)</i>.
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         </section>
         <section
           id="about"
-          className="flex flex-col justify-center sm:h-screen max-sm:mb-32"
+          className="flex flex-col justify-center max-sm:mb-32"
         >
           <h1 className="mb-8 text-5xl text-emerald-200 sm:text-5xl">
             About Me
